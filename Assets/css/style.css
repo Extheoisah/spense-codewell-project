@@ -76,14 +76,26 @@ header {
 }
 
 .header__toggle,
+.nav__close,
 .logo {
   cursor: pointer;
+}
+
+.nav__close {
+  position: absolute;
+  right: 1.5rem;
+  font-size: 1.3rem;
+  padding: 0.2rem 0.3rem;
+  background-color: var(--first-color);
+  color: var(--header-clr);
+  border-radius: 50%;
+  z-index: var(--z-fixed);
 }
 
 /* ==== Nav ==== */
 @media screen and (max-width: 768px) {
   header {
-    display: block;
+    /* display: block; */
     position: relative;
   }
 
@@ -91,11 +103,12 @@ header {
     position: absolute;
     width: 100%;
     top: 0%;
-    left: 0%;
+    left: 150%;
     height: 100vh;
     background-color: var(--header-clr);
     color: white;
     padding: 0 1.5rem;
+    transition: 0.75s;
   }
 
   .nav__item {
@@ -111,5 +124,9 @@ header {
 nav a {
   color: white;
   padding: 1rem 0.5rem;
-  background-color: red;
+  /* background-color: red; */
+}
+
+.show {
+  left: 0%;
 }
