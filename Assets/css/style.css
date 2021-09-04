@@ -129,4 +129,7 @@ nav a {
 
 .show {
   left: 0;
+  height: 50vh;
+  transition: 1s;
+  scroll-behavior: smooth;
 }
