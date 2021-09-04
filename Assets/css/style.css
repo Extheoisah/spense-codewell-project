@@ -103,7 +103,7 @@ header {
     position: absolute;
     width: 100%;
     top: 0%;
-    left: 150%;
+    left: -150%;
     height: 100vh;
     background-color: var(--header-clr);
     color: white;
@@ -128,5 +128,5 @@ nav a {
 }
 
 .show {
-  left: 0%;
+  left: 0;
 }
