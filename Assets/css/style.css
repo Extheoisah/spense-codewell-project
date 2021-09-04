@@ -116,8 +116,9 @@ header {
     /* border: 1px solid red; */
     margin-bottom: 0.5rem;
     padding-top: 0.75rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.75rem;
     border-bottom: 1px solid white;
+    font-size: calc(var(--fs-small) + 2px);
   }
 }
 
