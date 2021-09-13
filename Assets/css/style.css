@@ -53,7 +53,7 @@ ul {
 }
 
 .container {
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
   /* border: 2px solid red; */
@@ -241,8 +241,46 @@ section .hero__container .checkmarks .checkmark__item span {
   margin-left: 0.75rem;
 }
 
+section .hero__container form {
+  padding-bottom: 2rem;
+}
+
 section .hero__container form input {
-  padding: 1rem;
+  padding: 0.9rem 0;
+  color: var(--text);
+  text-align: center;
+  font-family: var(--primary-font);
+  outline: none;
+  border: 1px solid rgba(179, 175, 175, 0.6);
+  border-radius: 4px;
+}
+
+section .hero__container form button {
+  padding: 1rem 1.5rem;
+  background-color: var(--btn-clr);
+  color: var(--first-color);
+  font-family: var(--primary-font);
+  font-weight: var(--semibold-w);
   border: none;
   border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  section .hero__container .title {
+    font-size: calc(var(--fs-medium) + 2px);
+  }
+
+  section .hero__container .hero__image img {
+    display: none;
+    border: 1px solid red;
+  }
+
+  section .hero__container .hero__image {
+    background-image: url("/Assets/Hero Image (Tablet).png");
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
