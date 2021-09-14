@@ -202,6 +202,12 @@ section {
   color: var(--text);
 }
 
+/* section .hero__container .hero__image {
+  max-height: 400px;
+  max-width: 100%;
+  overflow: hidden;
+} */
+
 section .hero__container .title {
   font-size: calc(var(--fs-medium) - 4px);
   font-weight: var(--semibold-w);
@@ -279,6 +285,8 @@ section .hero__container form button {
   section .hero__container .hero__image {
     background-image: url("/Assets/Hero Image (Tablet).png");
     height: 300px;
+    margin-top: 1.5rem;
+    border-radius: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
