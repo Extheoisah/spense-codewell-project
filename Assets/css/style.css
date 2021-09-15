@@ -53,7 +53,7 @@ ul {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 1.5rem;
   /* border: 2px solid red; */
@@ -197,7 +197,7 @@ header {
   scroll-behavior: smooth;
 }
 
-section {
+section.hero__section {
   background-color: var(--first-color);
   color: var(--text);
 }
@@ -274,6 +274,33 @@ section .hero__container form button {
   margin-left: 0.5rem;
 }
 
+section.social__links {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section.social__links .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  padding: 3rem 0;
+}
+
+section.social__links .wrapper img {
+  margin-right: 1rem;
+  width: 90%;
+  height: 2rem;
+}
+
+section.social__links .wrapper .pinterest,
+section.social__links .wrapper .twitter,
+section.social__links .wrapper .reddit,
+section.social__links .wrapper .google,
+section.social__links .wrapper .slack {
+  display: none;
+}
+
 /* === MEDIA QUERIES === */
 @media screen and (min-width: 600px) {
   section .hero__container .title {
@@ -294,13 +321,19 @@ section .hero__container form button {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  section.social__links .wrapper .pinterest,
+  section.social__links .wrapper .twitter {
+    display: inherit;
+  }
 }
+
 @media screen and (min-width: 800px) {
   section .wrapper .hero__image-desktop {
     display: initial;
   }
 
-  section .wrapper {
+  section.hero__section .wrapper {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
@@ -309,22 +342,28 @@ section .hero__container form button {
     padding-bottom: 3em;
   }
 
-  section .wrapper .hero__container {
+  section.hero__section .wrapper .hero__container {
     width: 100%;
     padding-top: 0;
   }
 
-  section .wrapper .hero__image-desktop {
+  section.hero__section .wrapper .hero__image-desktop {
     width: 65%;
     max-height: 500px;
   }
 
-  section .wrapper .hero__image-desktop img {
+  section.hero__section .wrapper .hero__image-desktop img {
     width: 100%;
     max-height: 450px;
   }
 
-  section .wrapper .hero__container .text {
+  section.hero__section .wrapper .hero__container .text {
     max-width: 75%;
+  }
+
+  section.social__links .wrapper .reddit,
+  section.social__links .wrapper .google,
+  section.social__links .wrapper .slack {
+    display: inherit;
   }
 }
