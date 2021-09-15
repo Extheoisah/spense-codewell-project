@@ -275,7 +275,7 @@ section .hero__container form button {
 }
 
 section.social__links {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -288,8 +288,8 @@ section.social__links .wrapper {
 }
 
 section.social__links .wrapper img {
-  margin-right: 1rem;
-  width: 90%;
+  padding: 0 0.5rem;
+  width: 6rem;
   height: 2rem;
 }
 
@@ -320,6 +320,10 @@ section.social__links .wrapper .slack {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  section.social__links .wrapper img {
+    width: 7.5rem;
   }
 
   section.social__links .wrapper .pinterest,
