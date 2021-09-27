@@ -14,7 +14,7 @@
   /* font-size */
   --fs-big: 2.25rem;
   --fs-medium: 1.438rem;
-  --fs-small: 0.875rem;
+  --fs-small: 0.95rem;
 
   /* font-weights */
   --regular-w: 400;
@@ -218,7 +218,7 @@ section .hero__container .title {
 }
 
 section .hero__container .text {
-  font-size: var(--fs-small);
+  /* font-size: calc(var(--fs-small) + 10px); */
   line-height: 1.5;
 }
 
@@ -230,8 +230,8 @@ section .hero__container .checkmarks {
   display: flex;
   flex-direction: column;
   font-size: var(--fs-small);
-  font-weight: var(--semibold-w);
   padding: 0.75rem 0;
+  font-weight: var(--semibold-w);
 }
 
 section .hero__container .checkmarks img {
@@ -272,6 +272,7 @@ section .hero__container form button {
   border: none;
   border-radius: 4px;
   margin-left: 0.5rem;
+  cursor: pointer;
 }
 
 section.social__links {
@@ -288,9 +289,8 @@ section.social__links .wrapper {
 }
 
 section.social__links .wrapper img {
-  padding: 0 0.5rem;
   width: 6rem;
-  height: 2rem;
+  height: 1.375rem;
 }
 
 section.social__links .wrapper .pinterest,
@@ -299,6 +299,128 @@ section.social__links .wrapper .reddit,
 section.social__links .wrapper .google,
 section.social__links .wrapper .slack {
   display: none;
+}
+
+.escrow__wrapper {
+  background-color: var(--first-color);
+  border-radius: 10px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.escrow__wrapper .escrow__text {
+  padding: 2rem 2.5rem 0 2.5rem;
+}
+
+.escrow__wrapper .escrow__text h2 {
+  font-weight: var(--bold-w);
+  font-size: calc(var(--fs-big) - 5px);
+  color: var(--header-clr);
+}
+
+.escrow__wrapper .escrow__text p {
+  font-size: calc(var(--fs-small) + 1px);
+  line-height: 1.5;
+  color: var(--text);
+  padding: 1rem 0;
+}
+
+.escrow__wrapper .escrow__text .learn__more a {
+  font-size: calc(var(--fs-small) + 1px);
+  color: var(--text);
+  text-decoration: underline;
+  font-weight: var(--semibold-w);
+  position: relative;
+}
+
+.escrow__wrapper .escrow__text .learn__more a span {
+  position: relative;
+}
+
+.escrow__wrapper .escrow__text .learn__more a span::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  width: 0.875rem;
+  height: 1px;
+  border-bottom: 1px solid var(--text);
+}
+
+.escrow__wrapper .escrow__tablet-image,
+.escrow__wrapper .escrow__desktop-image {
+  display: none;
+}
+
+.text__editor-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.text__editor-wrapper .editor__image-desktop {
+  display: none;
+}
+
+.text__editor-wrapper .text {
+  padding: 2rem 0;
+}
+
+.text__editor-wrapper h2 {
+  width: 90%;
+  font-size: calc(var(--fs-big) - 5px);
+  padding-bottom: 1rem;
+  color: var(--title-text);
+}
+
+.text__editor-wrapper p {
+  color: var(--text);
+  line-height: 1.5;
+  padding-bottom: 1rem;
+}
+
+.text__editor-wrapper .text .editor__demo a {
+  font-size: calc(var(--fs-small) + 1px);
+  color: var(--text);
+  text-decoration: underline;
+  font-weight: var(--semibold-w);
+  position: relative;
+}
+
+.text__editor-wrapper .text .editor__demo a span {
+  position: relative;
+}
+
+.text__editor-wrapper .text .editor__demo a span::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  width: 0.875rem;
+  height: 1px;
+  border-bottom: 1px solid var(--text);
+}
+
+footer {
+  background-color: var(--header-clr);
+  color: var(--first-color);
+}
+
+.footer__wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem 0 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__wrapper p,
+.footer__wrapper a {
+  font-size: calc(var(--fs-small) + 1px);
+  color: var(--text);
+}
+
+.footer__wrapper h2 {
+  font-size: calc(var(--fs-medium) - 3px);
+  margin: 1rem 0 0.5rem 0;
 }
 
 /* === MEDIA QUERIES === */
@@ -315,7 +437,6 @@ section.social__links .wrapper .slack {
   section .hero__image {
     background-image: url("/Assets/Hero Image (Tablet).png");
     height: 300px;
-    /* padding-top: 2rem; */
     border-radius: 10px;
     background-position: center;
     background-repeat: no-repeat;
@@ -330,9 +451,33 @@ section.social__links .wrapper .slack {
   section.social__links .wrapper .twitter {
     display: inherit;
   }
+
+  .escrow__wrapper .escrow__text {
+    padding: 3rem 5rem 0 5rem;
+  }
+
+  .escrow__wrapper .escrow__text h2 {
+    max-width: 60%;
+  }
+
+  .escrow__wrapper .escrow__text p {
+    max-width: 75%;
+  }
+
+  .escrow__wrapper .escrow__phone-image {
+    display: none;
+  }
+
+  .escrow__wrapper .escrow__tablet-image {
+    display: initial;
+  }
 }
 
 @media screen and (min-width: 800px) {
+  :root {
+    --fs-small: 1rem;
+  }
+
   section .wrapper .hero__image-desktop {
     display: initial;
   }
@@ -365,9 +510,76 @@ section.social__links .wrapper .slack {
     max-width: 75%;
   }
 
+  section .hero__container .text {
+    font-size: calc(var(--fs-small) + 2px);
+  }
+
+  section.social__links .wrapper img {
+    padding: 0.5rem 0;
+    width: 7.5rem;
+    height: 2.675rem;
+  }
+
   section.social__links .wrapper .reddit,
   section.social__links .wrapper .google,
   section.social__links .wrapper .slack {
     display: inherit;
+  }
+
+  .escrow__wrapper .escrow__phone-image,
+  .escrow__wrapper .escrow__tablet-image {
+    display: none;
+  }
+
+  .escrow__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .escrow__wrapper .escrow__text {
+    padding-bottom: 2rem;
+    position: absolute;
+    z-index: 1000;
+    width: 70%;
+    /* border: 1px solid red; */
+  }
+
+  .escrow__wrapper .escrow__desktop-image {
+    display: unset;
+    margin-left: 7rem;
+  }
+
+  .escrow__wrapper .escrow__desktop-image img {
+    /* border: 1px solid green; */
+    z-index: 1;
+  }
+
+  .text__editor-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .text__editor-wrapper .editor__image {
+    order: 1;
+    width: 60%;
+  }
+
+  .text__editor-wrapper .text {
+    order: 2;
+    width: 45%;
+    font-size: calc(var(--fs-small) + 2px);
+  }
+
+  .footer__wrapper {
+    padding: 2rem 0;
+  }
+
+  .footer__wrapper .spense {
+    width: 30%;
+    display: block;
   }
 }
